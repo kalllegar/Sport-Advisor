@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  postgres-abiturient:
+    container_name: postgres_advisor
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      PGDATA: /data/postgres
+    volumes:
+      - ./postgres-db:/data/postgres
